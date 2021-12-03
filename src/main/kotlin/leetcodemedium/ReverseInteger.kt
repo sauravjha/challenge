@@ -1,5 +1,12 @@
 package leetcodemedium
-
+/*
+Time Submitted
+Status
+Runtime
+Memory
+Language
+17:48	Accepted	132 ms	33.4 MB	kotlin
+ */
 fun reverse(x: Int): Int {
     var number = x
     var reversedNumber = 0
@@ -12,4 +19,23 @@ fun reverse(x: Int): Int {
 
     }
     return reversedNumber
+}
+
+/*
+Time Submitted
+Status
+Runtime
+Memory
+Language
+12/03/2021 18:02	Accepted	152 ms	35.4 MB	kotlin
+ */
+
+fun reverseByConvertingToString(x: Int): Int {
+    var number = kotlin.math.abs(x).toString().reversed()
+    return try {
+        val reversed = number.toInt()
+        if (x < 0 ) reversed * -1 else reversed
+    } catch (e: Exception) {
+        0
+    }
 }

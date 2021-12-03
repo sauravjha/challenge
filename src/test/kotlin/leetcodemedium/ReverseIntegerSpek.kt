@@ -18,4 +18,16 @@ object ReverseIntegerSpek: Spek({
             }
         }
     }
+    describe("reverseByConvertingToString") {
+        context("when input is 123") {
+            it("returns 321") {
+                assertThat(reverseByConvertingToString(123), equalTo(321))
+            }
+        }
+        context("when input is -123") {
+            it("returns -321") {
+                assertThat(reverseByConvertingToString(-123), equalTo(-321))
+            }
+        }
+    }
 })
